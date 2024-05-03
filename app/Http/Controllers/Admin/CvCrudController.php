@@ -23,9 +23,9 @@ use Illuminate\Support\Facades\Storage;
 class CvCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
-        store as traitStore;
-    }
+    // use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation {
+    //     store as traitStore;
+    // }
     // use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation {
     //     update as traitUpdate;
     // }
