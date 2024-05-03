@@ -8,7 +8,6 @@
         $column['text'] = $column['prefix'].$column['text'].$column['suffix'];
     }
 @endphp
-
 <span>
     @includeWhen(!empty($column['wrapper']), 'crud::columns.inc.wrapper_start')
         @if($column['escaped'])

@@ -102,3 +102,6 @@
     </ul>
 </li>
 @endcanany
+
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('offre') }}'><i class='nav-icon la la-question'></i> Offres</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('cvs') }}'><i class='nav-icon la la-question'></i> Cvs</a></li>

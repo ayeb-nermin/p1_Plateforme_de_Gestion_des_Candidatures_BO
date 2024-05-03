@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'first_name' => 'User',
-                'email' => 'user@test.test',
+                'email' => 'nermine.alayeb@gmail.com',
                 'password' => 'secret',
                 'role' => 'user',
             ],

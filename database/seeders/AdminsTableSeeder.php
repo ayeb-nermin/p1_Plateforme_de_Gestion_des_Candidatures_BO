@@ -25,7 +25,7 @@ class AdminsTableSeeder extends Seeder
         $admins = [
             [
                 'name' => 'Super Admin',
-                'email' => 'admin@test.test',
+                'email' => 'nermine.alayeb@gmail.com',
                 'password' => 'secret',
                 'role' => 'super.admin',
             ],

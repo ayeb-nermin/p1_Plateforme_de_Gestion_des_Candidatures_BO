@@ -30,33 +30,9 @@ Route::group([
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     Route::crud('email', 'EmailCrudController');
+    Route::crud('offre', 'OffreCrudController');
+    Route::crud('cvs', 'CvCrudController');
+    Route::get('cvs/{cv}/download', 'CvCrudController@downloadPdf')->name('cvs.download');
+
 });
