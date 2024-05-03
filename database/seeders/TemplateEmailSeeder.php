@@ -34,6 +34,18 @@ class TemplateEmailSeeder extends Seeder
                 '[{"header_name":"subject","header_value":"Reset Password"}]',
                 'type' => 'forgot_password',
             ],
+            [
+                'name' => 'Activation de compte utilisateur',
+                'description' => 'Template d\'Activation de compte utilisateur',
+                'template' => "<p>Bonjour {{created_user_name}},</p>
+                <p>Nous avons le plaisir de vous informer que votre  <strong> « Espace » </strong> a été créé avec succès.</p>
+                <p> Pour pouvoir accéder à votre espace utilisateur, merci de cliquer sur le lien <a href='{{lien}}'target='_blank'> ci-dessous </a> afin de procéder à la vérification de votre compte.</p>
+                {{user_credential}}
+                <p>Nous vous remercions de votre confiance et restons à votre disposition pour toute question ou demande complémentaire.</p>" . $footer,
+                'headers' =>
+                    '[{"header_name":"subject","header_value":"Activation de compte utilisateur"}]',
+                'type' => 'user_activate_account',
+            ],
 
         ];
 

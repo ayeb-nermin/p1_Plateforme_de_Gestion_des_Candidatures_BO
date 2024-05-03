@@ -54,6 +54,9 @@ class CvCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        //get the CVs of the users that has applied only
+        // $this->crud->query = $this->crud->model->where('user_id', auth()->user()->id);
+
         $this->crud->addColumn([
             'name' => 'title',
             'label' => 'Title',
