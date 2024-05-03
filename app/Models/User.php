@@ -54,4 +54,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cv::class);
     }
+
+    public function offres()
+    {
+        return $this->belongsToMany(Offre::class,'candidatures' ,'user_id','offre_id');
+    }
 }

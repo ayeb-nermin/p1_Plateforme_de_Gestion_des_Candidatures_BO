@@ -138,5 +138,30 @@ class OffreCrudController extends CrudController
             'name' => 'created_at',
             'label' => 'Date de création',
         ]);
+
+        $this->crud->addColumn([
+            'name' => 'users',
+            'label' => 'Les utilisateurs qui ont postulé à cette offre.',
+            'type' => 'closure',
+            'function' => function ($entry) {
+                // Assuming $entry->users is a collection of users
+                $userInfo = '';
+                foreach ($entry->users as $user) {
+                    $userCVLink = ''; // Initialize CV link
+                    if ($user->cv) {
+                        // Generating URL using Laravel route helper
+                        $userCVLink = '<a href="' . route('cvs.show', ['id' => $user->cv->id]) . '" target="_blank">' . $user->cv->title . '</a>'; // CV link
+                    }
+                    $userInfo .= $user->first_name . ' - ' . $userCVLink . ', '; // Concatenate user info
+                }
+                // Remove the trailing comma and space
+                $userNames = rtrim($userInfo, ', ');
+
+                return "<table><tr><td>{$userNames}</td></tr></table>";
+            },
+        ]);
+
+
+
     }
 }
