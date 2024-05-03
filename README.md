@@ -78,15 +78,15 @@
      APP_URL="http://cms-backpack.com"
      ```
  
+    
   * Execute the following commands in order:
   
      ```properties
-     composer install --optimize-autoloader --no-dev
+     composer install
      php artisan key:generate
+     php artisan storage:link
+     php artisan migrate:fresh --seed
+     php artisan optimize
+     php artisan route:clear
      ```
-    
-  * Specify the modules to install for this command for exapmle: ['news', 'partner']:
-  
-     ```properties
-     php artisan cms:install
-     ```
+
